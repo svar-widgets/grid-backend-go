@@ -1,0 +1,7 @@
+.idea
+.vscode
+grid-backend-go
+db.sqlite
+application*
+uploads
+__debug_bin

@@ -1,0 +1,15 @@
+version: "3"
+services:
+  worker:
+    restart: always
+    build: .
+    ports:
+      - "8012:8012"
+    environment:
+      CONFIGOR_ENV_PREFIX: "APP"
+      APP_DB_PATH: db.sqlite
+      APP_DB_RESETONSTART: "true"
+      APP_SERVER_PORT: ":8012"
+      APP_SERVER_URL: "http://localhost:8012"
+      APP_SERVER_CORS: "true"
+      APP_BINARYDATA: "./uploads"
